@@ -8,7 +8,7 @@
 $users_table = []
 
 # User Model
-class User
+class UserClass
   def save
     $users_table << self
     puts "log: #{self} was saved!"
@@ -19,7 +19,7 @@ class User
   end
 
   def self.create
-    user = User.new
+    user = UserClass.new
     user.save
 
     puts "log: #{user} was created!"
@@ -28,19 +28,27 @@ end
 
 
 # Model.new
-user = User.new
-user.set_name
+user_instance = UserClass.new
+user_instance.set_name
 
-puts "user = #{user}"
+puts "user = #{user_instance}"
 
 # Model#save
 puts "users_table = #{$users_table}"
 
-user.save
+user_instance.save
 
 puts "users_table = #{$users_table}"
 
 # Model.create
-User.create
+UserClass.create
 
 puts "users_table = #{$users_table}"
+
+# クラスとインスタンスのちがい
+# クラスが規格
+# インスタンスが 1つの物
+#
+# CD -> クラス
+# あいみょん シングル CD - マリーゴールド -> インスタンス
+# あいみょん アルバム - 瞬間的シックスセンス -> インスタンス
