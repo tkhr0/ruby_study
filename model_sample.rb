@@ -13,6 +13,13 @@ class User
     $users_table << self
     puts "log: #{self} was saved!"
   end
+
+  def self.create
+    user = User.new
+    user.save
+
+    puts "log: #{user} was created!"
+  end
 end
 
 
@@ -25,5 +32,10 @@ puts "user = #{user}"
 puts "users_table = #{$users_table}"
 
 user.save
+
+puts "users_table = #{$users_table}"
+
+# Model.create
+User.create
 
 puts "users_table = #{$users_table}"
