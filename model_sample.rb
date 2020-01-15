@@ -26,40 +26,42 @@ class HumanClass
     puts "log: #{self} was created!"
   end
 
+  def self.find(name)
+    the_human = nil
+
+    $humans_table.each do |human|
+       if human.name == name
+         the_human = human
+       end
+    end
+
+    the_human
+  end
+
+  def name
+    @name
+  end
+
   def to_s
     @name
   end
 end
 
-# args
-## human 1
-human_1 = HumanClass.new
-human_1.set_name('ben')
-puts "human_1 = #{human_1}"
-## human 2
-human_2 = HumanClass.new
-human_2.set_name('cate')
-puts "human_2 = #{human_2}"
+# Model.new
+human_instance = HumanClass.new
+human_instance.set_name('ben')
+puts "human(ben) = #{human_instance}"
+# Model#save
+human_instance.save
 
-# # Model.new
-# human_instance = HumanClass.new
-# human_instance.set_name('ben')
-# puts "human(ben) = #{human_instance}"
-# # Model#save
-# puts "humans_table = #{$humans_table}"
-# human_instance.save
-# puts "humans_table = #{$humans_table}"
-#
-# # Model.new no.2
-# human_instance = HumanClass.new
-# human_instance.set_name('cate')
-# puts "human(cate) = #{human_instance}"
-# human_instance.save
-# puts "humans_table = #{$humans_table}"
-#
-# # Model.create
-# HumanClass.create
-# puts "humans_table = #{$humans_table}"
+# Model.new no.2
+human_instance = HumanClass.new
+human_instance.set_name('cate')
+human_instance.save
+
+# Model.create
+HumanClass.create
+puts "humans_table = #{$humans_table}"
 
 # クラスとインスタンスのちがい
 # クラス       -> 概念
@@ -72,3 +74,7 @@ puts "human_2 = #{human_2}"
 # CD -> クラス
 # あいみょん シングル CD - マリーゴールド -> インスタンス
 # あいみょん アルバム - 瞬間的シックスセンス -> インスタンス
+
+# Model.find
+ben = HumanClass.find('ben')
+puts "ben = #{ben}"
