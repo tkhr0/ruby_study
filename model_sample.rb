@@ -31,6 +31,16 @@ class HumanClass
   end
 end
 
+# args
+## human 1
+human_1 = HumanClass.new
+human_1.set_name
+puts "human_1 = #{human_1}"
+# human 2
+human_2 = HumanClass.new
+human_2.set_name
+puts "human_2 = #{human_2}"
+
 # # Model.new
 # human_instance = HumanClass.new
 # human_instance.set_name('ben')
