@@ -27,19 +27,25 @@ class HumanClass
   end
 end
 
-# Model.new
-human_instance = HumanClass.new
-human_instance.set_name
-puts "human = #{human_instance}"
-
-# Model#save
-puts "humans_table = #{$humans_table}"
-human_instance.save
-puts "humans_table = #{$humans_table}"
-
-# Model.create
-HumanClass.create
-puts "humans_table = #{$humans_table}"
+# # Model.new
+# human_instance = HumanClass.new
+# human_instance.set_name('ben')
+# puts "human(ben) = #{human_instance}"
+# # Model#save
+# puts "humans_table = #{$humans_table}"
+# human_instance.save
+# puts "humans_table = #{$humans_table}"
+#
+# # Model.new no.2
+# human_instance = HumanClass.new
+# human_instance.set_name('cate')
+# puts "human(cate) = #{human_instance}"
+# human_instance.save
+# puts "humans_table = #{$humans_table}"
+#
+# # Model.create
+# HumanClass.create
+# puts "humans_table = #{$humans_table}"
 
 # クラスとインスタンスのちがい
 # クラス       -> 概念
