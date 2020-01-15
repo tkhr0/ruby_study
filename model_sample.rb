@@ -3,10 +3,9 @@
 # Model.create
 # Model.find
 
-
 # database
-users_table = []
+$humans_table = []
 
 # User Model
-class User
+class HumanClass
 end
