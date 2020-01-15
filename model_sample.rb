@@ -25,6 +25,10 @@ class HumanClass
 
     puts "log: #{self} was created!"
   end
+
+  def to_s
+    @name
+  end
 end
 
 # # Model.new
