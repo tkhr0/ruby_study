@@ -15,8 +15,8 @@ class HumanClass
     puts "log: #{self} was saved!"
   end
 
-  def set_name
-    @name = 'ben'
+  def set_name(name)
+    @name = name
   end
 
   def self.create
@@ -34,11 +34,11 @@ end
 # args
 ## human 1
 human_1 = HumanClass.new
-human_1.set_name
+human_1.set_name('ben')
 puts "human_1 = #{human_1}"
-# human 2
+## human 2
 human_2 = HumanClass.new
-human_2.set_name
+human_2.set_name('cate')
 puts "human_2 = #{human_2}"
 
 # # Model.new
