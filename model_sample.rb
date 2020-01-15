@@ -40,3 +40,15 @@ puts "humans_table = #{$humans_table}"
 # Model.create
 HumanClass.create
 puts "humans_table = #{$humans_table}"
+
+# クラスとインスタンスのちがい
+# クラス       -> 概念
+# インスタンス -> 具体的なもの
+
+# クラスとインスタンスのちがい
+# クラス       -> 規格
+# インスタンス -> 1つの物
+#
+# CD -> クラス
+# あいみょん シングル CD - マリーゴールド -> インスタンス
+# あいみょん アルバム - 瞬間的シックスセンス -> インスタンス
