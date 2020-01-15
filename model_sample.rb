@@ -15,6 +15,10 @@ class HumanClass
     puts "log: #{self} was saved!"
   end
 
+  def set_name
+    @name = 'ben'
+  end
+
   def self.create
     human_instance = HumanClass.new
     human_instance.save
@@ -25,6 +29,7 @@ end
 
 # Model.new
 human_instance = HumanClass.new
+human_instance.set_name
 puts "human = #{human_instance}"
 
 # Model#save
