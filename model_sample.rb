@@ -14,6 +14,13 @@ class HumanClass
     $humans_table << self
     puts "log: #{self} was saved!"
   end
+
+  def self.create
+    human_instance = HumanClass.new
+    human_instance.save
+
+    puts "log: #{self} was created!"
+  end
 end
 
 # Model.new
@@ -23,4 +30,8 @@ puts "human = #{human_instance}"
 # Model#save
 puts "humans_table = #{$humans_table}"
 human_instance.save
+puts "humans_table = #{$humans_table}"
+
+# Model.create
+HumanClass.create
 puts "humans_table = #{$humans_table}"
